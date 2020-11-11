@@ -13,7 +13,6 @@ import org.springframework.web.bind.annotation.RestController;
 
 import br.salaoeveris.app.request.AgendamentoRequest;
 import br.salaoeveris.app.response.BaseResponse;
-import br.salaoeveris.app.response.ListRelAgendamentoResponse;
 import br.salaoeveris.app.service.AgendamentoService;
 
 @RestController
@@ -35,16 +34,5 @@ public class AgendamentoController extends BaseController {
 			return ResponseEntity.status(error.statusCode).body(error);
 		}
 	}
-
-	@GetMapping (path ="/{dataInicio},{dataFim}")
-	public ResponseEntity<BaseResponse> relatorio(@PathVariable String dataInicio, @PathVariable String dataFim){
-		try {
-			ListRelAgendamentoResponse relatorio = _service.relatorio(dataInicio, dataFim);
-		return ResponseEntity.status(relatorio.statusCode).body(relatorio);
-		}catch (Exception e){
-			return ResponseEntity.status(error.statusCode).body(error);
-		}
-	}
-	
 	
 }

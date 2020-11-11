@@ -11,8 +11,7 @@ import org.springframework.stereotype.Service;
 import br.salaoeveris.app.model.Agendamento;
 import br.salaoeveris.app.repository.AgendamentoRepository;
 import br.salaoeveris.app.request.AgendamentoRequest;
-import br.salaoeveris.app.response.BaseResponse;
-import br.salaoeveris.app.response.ListRelAgendamentoResponse;
+import br.salaoeveris.app.response.BaseResponse;;
 
 
 @Service
@@ -59,29 +58,21 @@ public class AgendamentoService {
     }
     
     
-    public ListRelAgendamentoResponse relatorio(String dataInicio, String dataFim) {
-    	
-    	String dtInicio = dataInicio.toLocalDateTime().toString();
-    	String dtFim = dataInicio.toLocalDateTime().toString();
-    	
-    	
-    	ListRelAgendamentoResponse relatorio = new ListRelAgendamentoResponse();
-
-    	relatorio.setRelatorio(_repository.findAgendamento(dtInicio, dtFim));
-    	
-    	return relatorio;
-    	
-    	
-    	
-    	
-    	
-    	
-		
-    	
-
+//    public ListRelAgendamentoResponse relatorio(String dataInicio, String dataFim) {
+//    	
+//    	String dtInicio = dataInicio.toLocalDateTime().toString();
+//    	String dtFim = dataInicio.toLocalDateTime().toString();
+//    	
+//    	
+//    	ListRelAgendamentoResponse relatorio = new ListRelAgendamentoResponse();
+//
+//    	relatorio.setRelatorio(_repository.findAgendamento(dtInicio, dtFim));
+//    	
+//    	return relatorio;
+//    	}
 		
 	}
-    }
+    
 	
 	
 	

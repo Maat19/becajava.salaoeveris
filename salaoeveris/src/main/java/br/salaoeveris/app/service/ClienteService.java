@@ -81,7 +81,6 @@ public class ClienteService {
 		}
 		
 		
-		
 		response.statusCode = 200;
 		response.message = "Cliente obtido com sucesso.";
 		response.setEndereco(cliente.get().getEndereco());

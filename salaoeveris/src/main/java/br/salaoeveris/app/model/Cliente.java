@@ -11,7 +11,7 @@ public class Cliente {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long Id;
+	private Long id;
 	
 	private String nome;
 	private String telefone;
@@ -19,11 +19,14 @@ public class Cliente {
 	private String cpf;
 	
 	
+	
+	
+	
 	public Long getId() {
-		return Id;
+		return id;
 	}
 	public void setId(Long id) {
-		Id = id;
+		this.id = id;
 	}
 	public String getNome() {
 		return nome;

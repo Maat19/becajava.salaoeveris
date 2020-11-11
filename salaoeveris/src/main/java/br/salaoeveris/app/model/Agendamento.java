@@ -14,7 +14,7 @@ public class Agendamento {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long Id;
+	private Long id;
 	
 	private LocalDateTime dataHora;
 	
@@ -27,12 +27,15 @@ public class Agendamento {
 	@JoinColumn(name = "servicoid")
 	private Servico servico;
 
+	
+	
+
 	public Long getId() {
-		return Id;
+		return id;
 	}
 
 	public void setId(Long id) {
-		Id = id;
+		this.id = id;
 	}
 
 	public LocalDateTime getDataHora() {
